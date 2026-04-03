@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 setup(
     name="quantvn",
-    version="0.1.18",
+    version="0.1.19",
     packages=find_packages(),
     install_requires=[
         "requests",

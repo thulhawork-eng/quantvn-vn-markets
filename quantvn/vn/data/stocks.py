@@ -2177,11 +2177,13 @@ def get_hist(symbol: str, resolution: str = "1H"):
         "15m": "15m",
         "h": "1h",
         "1h": "1h",
+        "d":"1d",
+        "1d":"1d",
     }
     freq = str(resolution or "").lower()
     interval_mapped = res_map.get(freq)
     if not interval_mapped:
-        raise ValueError("resolution must be one of: '15m', '1h'.")
+        raise ValueError("resolution must be one of: '15m', '1h', '1d'.")
 
     api_key = Config.get_api_key()
     payload = {"symbol": sym, "interval": interval_mapped}
